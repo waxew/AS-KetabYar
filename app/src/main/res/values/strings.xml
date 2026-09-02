@@ -1,181 +1,163 @@
 <resources>
-    <string name="app_name" translatable="false">Myne</string>
-    <!-- Others Strings -->
-    <string name="not_applicable">N/A</string>
-    <string name="woops">"Whoops!!"</string>
-    <string name="confirm">Confirm</string>
-    <string name="cancel">Cancel</string>
-    <string name="ok">OK</string>
-    <string name="got_it">Got it</string>
-    <string name="no_app_to_handle_epub">Cannot find any app to open epub file.</string>
-    <string name="network_error">Oops! The server is temporarily unavailable. Please try again later.</string>
-    <string name="network_error_retry">Try Again</string>
-    <string name="error">Oops! Something went wrong.</string>
-    <string name="no_app_to_handle_content">Can\'t find any app to open this content.</string>
+    <string name="app_name" translatable="false">کتاب‌یار</string>
+    <string name="not_applicable">نامشخص</string>
+    <string name="woops">خطا!</string>
+    <string name="confirm">تأیید</string>
+    <string name="cancel">انصراف</string>
+    <string name="ok">باشه</string>
+    <string name="got_it">متوجه شدم</string>
+    <string name="no_app_to_handle_epub">برنامه‌ای برای باز کردن فایل EPUB پیدا نشد.</string>
+    <string name="network_error">ارتباط با سرور برقرار نشد. دوباره تلاش کنید.</string>
+    <string name="network_error_retry">تلاش دوباره</string>
+    <string name="error">خطایی رخ داد.</string>
+    <string name="no_app_to_handle_content">برنامه‌ای برای باز کردن این محتوا پیدا نشد.</string>
 
-    <!-- Navigation titles -->
-    <string name="navigation_home">Home</string>
-    <string name="navigation_categories">Categories</string>
-    <string name="navigation_library">Library</string>
-    <string name="navigation_settings">Settings</string>
+    <!-- ناوبری اصلی کتاب‌یار -->
+    <string name="navigation_home">کتاب‌ها</string>
+    <string name="navigation_categories">دسته‌بندی‌ها</string>
+    <string name="navigation_library">کتابخانه من</string>
+    <string name="navigation_settings">تنظیمات</string>
 
-    <!-- ToolTips -->
-    <string name="library_tooltip">TIP! Swipe library items left or right to share or view book details.</string>
+    <string name="library_tooltip">نکته: برای اشتراک‌گذاری یا مشاهده جزئیات، آیتم کتابخانه را به چپ یا راست بکشید.</string>
 
-    <!-- Welcome Screen -->
-    <string name="welcome_screen_title">Thanks for installing Myne!</string>
-    <string name="welcome_screen_desc">Choose your preferred ebook reader to embark on your reading journey.</string>
-    <string name="welcome_screen_button">Get Started</string>
+    <string name="welcome_screen_title">به کتاب‌یار خوش آمدید</string>
+    <string name="welcome_screen_desc">کتاب‌ها را پیدا کنید، به کتابخانه اضافه کنید و با کتاب‌خوان داخلی مطالعه کنید.</string>
+    <string name="welcome_screen_button">شروع</string>
 
-    <!-- Home screen. -->
-    <string name="home_header">All Books</string>
-    <string name="home_language_icon_desc">Sort by language</string>
-    <string name="home_search_icon_desc">Search books</string>
-    <string name="language_menu_title">Browse by language</string>
+    <string name="home_header">همه کتاب‌ها</string>
+    <string name="home_language_icon_desc">فیلتر بر اساس زبان</string>
+    <string name="home_search_icon_desc">جستجوی کتاب</string>
+    <string name="language_menu_title">انتخاب زبان کتاب</string>
 
-    <!-- Categories screen. -->
-    <string name="categories_header">Categories</string>
-    <string name="no_books_found_for_lang_and_cat">No books available in %s language for this category.</string>
-    <!-- Categories -->
-    <string name="category_animal">Animals</string>
-    <string name="category_children">Children</string>
-    <string name="category_classics">Classics</string>
-    <string name="category_countries">Countries</string>
-    <string name="category_crime">Crime</string>
-    <string name="category_education">Education</string>
-    <string name="category_fiction">Fiction</string>
-    <string name="category_geography">Geography</string>
-    <string name="category_history">History</string>
-    <string name="category_literature">Literature</string>
-    <string name="category_law">Law</string>
-    <string name="category_music">Music</string>
-    <string name="category_periodicals">Periodicals</string>
-    <string name="category_psychology">Psychology</string>
-    <string name="category_philosophy">Philosophy</string>
-    <string name="category_religion">Religion</string>
-    <string name="category_romance">Romance</string>
-    <string name="category_science">Science</string>
+    <string name="categories_header">دسته‌بندی‌ها</string>
+    <string name="no_books_found_for_lang_and_cat">برای این دسته‌بندی کتابی به زبان %s پیدا نشد.</string>
+    <string name="category_animal">حیوانات</string>
+    <string name="category_children">کودک و نوجوان</string>
+    <string name="category_classics">کلاسیک</string>
+    <string name="category_countries">کشورها</string>
+    <string name="category_crime">جنایی</string>
+    <string name="category_education">آموزشی</string>
+    <string name="category_fiction">داستانی</string>
+    <string name="category_geography">جغرافیا</string>
+    <string name="category_history">تاریخ</string>
+    <string name="category_literature">ادبیات</string>
+    <string name="category_law">حقوق</string>
+    <string name="category_music">موسیقی</string>
+    <string name="category_periodicals">نشریات</string>
+    <string name="category_psychology">روان‌شناسی</string>
+    <string name="category_philosophy">فلسفه</string>
+    <string name="category_religion">دین</string>
+    <string name="category_romance">عاشقانه</string>
+    <string name="category_science">علمی</string>
 
-    <!-- Library screen. -->
-    <string name="library_header">Library</string>
-    <string name="empty_library">Nothing Here!</string>
-    <string name="import_button_text">Import</string>
-    <string name="import_button_onboarding">Import your own books!</string>
-    <string name="import_button_onboarding_desc">Now you can import your own EPUB books and read them in Myne.</string>
-    <string name="import_button_desc">Import epub book</string>
-    <string name="external_book_info_unavailable">Only available for internal books.</string>
-    <string name="epub_importing">Importing… \nPlease wait.</string>
-    <string name="epub_imported">Imported successfully!</string>
-    <string name="epub_import_error">Failed to import!</string>
-    <string name="open_app_chooser">Open with…</string>
-    <string name="share_app_chooser">Share with…</string>
-    <string name="library_read_button">Read</string>
-    <string name="library_delete_button">Delete</string>
-    <string name="library_delete_dialog_title">Are you sure about that?</string>
+    <string name="library_header">کتابخانه من</string>
+    <string name="empty_library">کتابخانه خالی است</string>
+    <string name="import_button_text">افزودن کتاب</string>
+    <string name="import_button_onboarding">کتاب‌های EPUB خودتان را اضافه کنید</string>
+    <string name="import_button_onboarding_desc">فایل EPUB را وارد کنید و مستقیماً در کتاب‌یار بخوانید.</string>
+    <string name="import_button_desc">افزودن فایل EPUB</string>
+    <string name="external_book_info_unavailable">جزئیات کامل فقط برای کتاب‌های داخلی در دسترس است.</string>
+    <string name="epub_importing">در حال افزودن کتاب…\nلطفاً صبر کنید.</string>
+    <string name="epub_imported">کتاب با موفقیت اضافه شد.</string>
+    <string name="epub_import_error">افزودن کتاب ناموفق بود.</string>
+    <string name="open_app_chooser">باز کردن با…</string>
+    <string name="share_app_chooser">اشتراک‌گذاری با…</string>
+    <string name="library_read_button">مطالعه</string>
+    <string name="library_delete_button">حذف</string>
+    <string name="library_delete_dialog_title">این کتاب حذف شود؟</string>
 
-    <!-- Reader Detail Screen -->
-    <string name="reader_detail_header">Ebook Reader</string>
-    <string name="start_reading_button">Start</string>
-    <string name="continue_reading_button">Resume</string>
-    <string name="reader_chapters_list">Chapters</string>
+    <string name="reader_detail_header">کتاب‌خوان</string>
+    <string name="start_reading_button">شروع مطالعه</string>
+    <string name="continue_reading_button">ادامه مطالعه</string>
+    <string name="reader_chapters_list">فصل‌ها</string>
+    <string name="reader_max_font_size_reached">بیشترین اندازه فونت انتخاب شده است</string>
+    <string name="reader_min_font_size_reached">کمترین اندازه فونت انتخاب شده است</string>
+    <string name="reader_max_line_height_reached">بیشترین فاصله خطوط انتخاب شده است</string>
+    <string name="reader_min_line_height_reached">کمترین فاصله خطوط انتخاب شده است</string>
+    <string name="reader_font_style_chooser">تغییر فونت</string>
+    <string name="reader_chapter_list_title">فصل‌ها</string>
+    <string name="reader_bookmarks_list_title">نشانک‌ها</string>
+    <string name="reader_bookmark_added">نشانک اضافه شد</string>
+    <string name="reader_bookmark_removed">نشانک حذف شد</string>
+    <string name="reader_sepia_mode_on">حالت سپیا: روشن</string>
+    <string name="reader_sepia_mode_off">حالت سپیا: خاموش</string>
+    <string name="reader_auto_scroll_start">شروع پیمایش خودکار</string>
+    <string name="reader_auto_scroll_stop">توقف پیمایش خودکار</string>
 
-    <!--Reader Screen -->
-    <string name="reader_max_font_size_reached">Max font size reached</string>
-    <string name="reader_min_font_size_reached">Min font size reached</string>
-    <string name="reader_max_line_height_reached">Max line height reached</string>
-    <string name="reader_min_line_height_reached">Min line height reached</string>
-    <string name="reader_font_style_chooser">Change FontStyle</string>
-    <string name="reader_chapter_list_title">Chapters</string>
-    <string name="reader_bookmarks_list_title">Bookmarks</string>
-    <string name="reader_bookmark_added">Bookmark added</string>
-    <string name="reader_bookmark_removed">Bookmark removed</string>
-    <string name="reader_sepia_mode_on">Sepia Mode: On</string>
-    <string name="reader_sepia_mode_off">Sepia Mode: Off</string>
-    <string name="reader_auto_scroll_start">Start Auto Scroll</string>
-    <string name="reader_auto_scroll_stop">Stop Auto Scroll</string>
+    <string name="copy">کپی</string>
+    <string name="copied">کپی شد</string>
+    <string name="web_search">جستجو در وب</string>
+    <string name="share">اشتراک‌گذاری</string>
+    <string name="translate">ترجمه</string>
+    <string name="dictionary">معنی</string>
 
-    <!-- Text selection -->
-    <string name="copy">Copy</string>
-    <string name="copied">Copied!</string>
-    <string name="web_search">Web Search</string>
-    <string name="share">Share</string>
-    <string name="translate">Translate</string>
-    <string name="dictionary">Meaning</string>
-
-    <!-- Settings screen. -->
-    <string name="settings_header">Settings</string>
-    <string name="app_desc">Ebook Downloader</string>
-    <string name="made_by">Made with ❤ by Shivam</string>
-    <string name="general_settings_header">General</string>
-    <string name="default_reader_setting">Default Reader</string>
-    <string name="default_reader_dialog_title">Open ebooks with…</string>
-    <string name="reader_option_inbuilt">Inbuilt Reader</string>
-    <string name="reader_option_external">External Reader</string>
-    <string name="default_locale_setting">Default Locale</string>
-    <string name="default_locale_setting_desc">Select your preferred locale.</string>
-    <string name="locale_setting_not_found">Sorry! this feature is not yet supported by your OS.</string>
-    <string name="open_library_at_start_setting">Open Library at Start</string>
-    <string name="open_library_at_start_setting_desc">Launch Library screen when app starts.</string>
-    <string name="reader_dnd_setting">Do Not Disturb</string>
-    <string name="reader_dnd_setting_desc">Automatically enable DND mode when reading.</string>
-    <string name="reader_dnd_permission_error">Please grant Do Not Disturb access to use this feature.</string>
-    <string name="display_setting_header">Display</string>
-    <string name="theme_setting">Default Theme</string>
-    <string name="theme_dialog_title">Change Theme</string>
-    <string name="theme_option_light">Light</string>
-    <string name="theme_option_dark">Dark</string>
-    <string name="theme_option_system">System Default</string>
-    <string name="theme_dialog_apply_button">Apply</string>
-    <string name="amoled_theme_setting">Black Theme</string>
-    <string name="amoled_theme_setting_disabled_desc">Enable Amoled Black Theme</string>
-    <string name="amoled_theme_setting_enabled_desc">Disable Amoled Black Theme</string>
+    <string name="settings_header">تنظیمات</string>
+    <string name="app_desc">مدیریت، دریافت و مطالعه کتاب الکترونیکی</string>
+    <string name="made_by">Develop by AS Team Group</string>
+    <string name="general_settings_header">عمومی</string>
+    <string name="default_reader_setting">کتاب‌خوان پیش‌فرض</string>
+    <string name="default_reader_dialog_title">باز کردن کتاب با…</string>
+    <string name="reader_option_inbuilt">کتاب‌خوان داخلی</string>
+    <string name="reader_option_external">کتاب‌خوان دیگر</string>
+    <string name="default_locale_setting">زبان برنامه</string>
+    <string name="default_locale_setting_desc">زبان رابط کاربری را انتخاب کنید.</string>
+    <string name="locale_setting_not_found">این قابلیت در نسخه سیستم‌عامل شما پشتیبانی نمی‌شود.</string>
+    <string name="open_library_at_start_setting">باز کردن کتابخانه هنگام اجرا</string>
+    <string name="open_library_at_start_setting_desc">برنامه مستقیماً با صفحه کتابخانه باز شود.</string>
+    <string name="reader_dnd_setting">مزاحم نشوید هنگام مطالعه</string>
+    <string name="reader_dnd_setting_desc">هنگام مطالعه حالت مزاحم نشوید به‌صورت خودکار فعال شود.</string>
+    <string name="reader_dnd_permission_error">برای این قابلیت، دسترسی مزاحم نشوید را فعال کنید.</string>
+    <string name="display_setting_header">نمایش</string>
+    <string name="theme_setting">پوسته برنامه</string>
+    <string name="theme_dialog_title">انتخاب پوسته</string>
+    <string name="theme_option_light">روشن</string>
+    <string name="theme_option_dark">تیره</string>
+    <string name="theme_option_system">مطابق سیستم</string>
+    <string name="theme_dialog_apply_button">اعمال</string>
+    <string name="amoled_theme_setting">پوسته مشکی AMOLED</string>
+    <string name="amoled_theme_setting_disabled_desc">فعال‌سازی پوسته کاملاً مشکی</string>
+    <string name="amoled_theme_setting_enabled_desc">غیرفعال‌سازی پوسته کاملاً مشکی</string>
     <string name="material_you_setting" translatable="false">Material You</string>
-    <string name="material_you_setting_disabled_desc">Enable Material You</string>
-    <string name="material_you_setting_enabled_desc">Disable Material You</string>
-    <string name="material_you_error">This feature is only for devices running Android 12 or above.</string>
-    <string name="miscellaneous_setting_header">Miscellaneous</string>
-    <string name="license_setting">License &amp; Acknowledgements</string>
-    <string name="license_setting_desc">Open source licenses.</string>
-    <string name="about_setting">App Information</string>
-    <string name="about_setting_desc">Show App information &amp; useful links</string>
+    <string name="material_you_setting_disabled_desc">فعال‌سازی Material You</string>
+    <string name="material_you_setting_enabled_desc">غیرفعال‌سازی Material You</string>
+    <string name="material_you_error">این قابلیت به Android 12 یا جدیدتر نیاز دارد.</string>
+    <string name="miscellaneous_setting_header">سایر</string>
+    <string name="license_setting">مجوزها و اعتبارها</string>
+    <string name="license_setting_desc">مشاهده مجوز کتابخانه‌های متن‌باز.</string>
+    <string name="about_setting">درباره کتاب‌یار</string>
+    <string name="about_setting_desc">اطلاعات برنامه، نسخه و راه‌های ارتباطی</string>
 
-    <!-- Books card -->
-    <string name="cover_image_desc">Book cover image</string>
+    <string name="cover_image_desc">جلد کتاب</string>
+    <string name="book_detail_header">جزئیات کتاب</string>
+    <string name="back_button_desc">بازگشت</string>
+    <string name="share_button_desc">اشتراک‌گذاری کتاب</string>
+    <string name="share_intent_header">اشتراک‌گذاری با…</string>
+    <string name="read_book_button">شروع مطالعه</string>
+    <string name="download_book_button">دریافت کتاب</string>
+    <string name="download_started">دریافت کتاب شروع شد.</string>
+    <string name="public_domain">مالکیت عمومی</string>
+    <string name="not_public_domain">دارای محدودیت</string>
+    <string name="book_synopsis">معرفی کتاب</string>
+    <string name="book_synopsis_not_found">اطلاعاتی موجود نیست</string>
 
-    <!-- Book Detail Screen -->
-    <string name="book_detail_header">Book Details</string>
-    <string name="back_button_desc">Go back.</string>
-    <string name="share_button_desc">Share this book.</string>
-    <string name="share_intent_header">Share this using…</string>
-    <string name="read_book_button">Start Reading</string>
-    <string name="download_book_button">Download</string>
-    <string name="download_started">Download Started!</string>
-    <string name="public_domain">PD</string>
-    <string name="not_public_domain">NPD</string>
-    <string name="book_synopsis">Synopsis</string>
-    <string name="book_synopsis_not_found">Not available</string>
-
-    <!-- About Screen -->
-    <string name="about_header">About</string>
-    <string name="about_desc">A Free &amp; Open Source Android application to download ebooks from the Project Gutenberg.</string>
-    <string name="developed_by">Developed By</string>
-    <string name="dev_name" translatable="false">Starry Shivam</string>
-    <string name="project_contributors">Project Contributors</string>
-    <string name="project_contributors_desc">Meet our wonderful contributors.</string>
-    <string name="useful_links">Useful Links</string>
-    <string name="link_readme">README</string>
-    <string name="link_readme_desc">Checkout app\'s README on Github.</string>
-    <string name="link_website">Website</string>
-    <string name="link_website_desc">Visit our website for more information.</string>
-    <string name="link_privacy_policy">Privacy Policy</string>
-    <string name="link_privacy_policy_desc">Read our latest privacy policy.</string>
-    <string name="link_gh_issue">Github Issues</string>
-    <string name="link_gh_issue_desc">Create an issue on Github.</string>
-    <string name="link_telegram">Telegram Group</string>
-    <string name="link_telegram_desc">Hang out with us on Telegram!</string>
-    <string name="link_support">Support Development</string>
-    <string name="link_support_desc">Think I deserve cookies? Click here!</string>
-
-    <!-- Open source libraries screen -->
-    <string name="open_source_licenses_header">Licenses</string>
+    <string name="about_header">درباره کتاب‌یار</string>
+    <string name="about_desc">کتاب‌یار برنامه‌ای برای جستجو، مدیریت و مطالعه کتاب‌های الکترونیکی و فایل‌های EPUB است.</string>
+    <string name="developed_by">توسعه و شخصی‌سازی</string>
+    <string name="dev_name" translatable="false">AS Team Group</string>
+    <string name="project_contributors">مشارکت‌کنندگان پروژه متن‌باز</string>
+    <string name="project_contributors_desc">مشاهده مشارکت‌کنندگان پروژه پایه.</string>
+    <string name="useful_links">پیوندهای کاربردی</string>
+    <string name="link_readme">راهنمای پروژه</string>
+    <string name="link_readme_desc">README کتاب‌یار در GitHub</string>
+    <string name="link_website">وب‌سایت</string>
+    <string name="link_website_desc">اطلاعات بیشتر درباره پروژه</string>
+    <string name="link_privacy_policy">حریم خصوصی</string>
+    <string name="link_privacy_policy_desc">سیاست حریم خصوصی کتاب‌یار</string>
+    <string name="link_gh_issue">گزارش مشکل</string>
+    <string name="link_gh_issue_desc">ثبت Issue در GitHub پروژه</string>
+    <string name="link_telegram">ارتباط با تیم</string>
+    <string name="link_telegram_desc">راه‌های ارتباطی AS Team</string>
+    <string name="link_support">پشتیبانی توسعه</string>
+    <string name="link_support_desc">اطلاعات توسعه و نگهداری پروژه</string>
+    <string name="open_source_licenses_header">مجوزهای متن‌باز</string>
 </resources>
