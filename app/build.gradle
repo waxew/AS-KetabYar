@@ -13,13 +13,13 @@ plugins {
 
 android {
     namespace 'com.starry.myne'
-    compileSdk = 37
+    compileSdk = 36
 
     defaultConfig {
         // شناسه انتشار مستقل کتاب‌یار. namespace در refactor کامل تغییر می‌کند.
         applicationId "com.asteam.ketabyar"
         minSdk 26
-        targetSdk 37
+        targetSdk 36
         versionCode 510
         versionName "5.1.0"
 
