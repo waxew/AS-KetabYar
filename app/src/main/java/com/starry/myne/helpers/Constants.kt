@@ -1,41 +1,33 @@
 /**
  * Copyright (c) [2022 - Present] Stɑrry Shivɑm
+ * Licensed under the Apache License, Version 2.0.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
+ * AS-KetabYar preserves the upstream attribution while maintaining
+ * project-specific links and support information in one place.
  */
-
 package com.starry.myne.helpers
 
 object Constants {
-    /** Name of database file. */
+    /** نام دیتابیس فعلی عمداً ثابت مانده تا داده‌های موجود بدون Migration از بین نروند. */
     const val DATABASE_NAME = "myne.db"
 
-    /** Epub Mime Type. */
+    /** نوع MIME استاندارد فایل EPUB. */
     const val EPUB_MIME_TYPE = "application/epub+zip"
 
-    /** Placeholder for unknown error. */
+    /** مقدار جایگزین برای خطاهای ناشناخته. */
     const val UNKNOWN_ERR = "unknown-error"
 
-    // URLs
-    const val DEV_EMAIL = "loafy.hawk@gmail.com"
-    const val DEV_GITHUB_URL = "https://github.com/starry-shivam"
-    const val DEV_TELEGRAM_URL = "https://t.me/starryboi"
+    // اطلاعات و لینک‌های پروژه کتاب‌یار.
+    const val DEV_EMAIL = "AS.Developers.Support@Gmail.Com"
+    const val DEV_GITHUB_URL = "https://github.com/waxew"
+    const val DEV_TELEGRAM_URL = "https://github.com/waxew/AS-KetabYar"
+    const val GITHUB_REPO = "https://github.com/waxew/AS-KetabYar"
+    const val GITHUB_ISSUE = "https://github.com/waxew/AS-KetabYar/issues/new"
+    const val WEBSITE = GITHUB_REPO
+    const val PRIVACY_POLICY = "https://github.com/waxew/AS-KetabYar/blob/main/legal/PRIVACY-POLICY.md"
+
+    // اعتبار پروژه پایه مطابق مجوز متن‌باز حفظ می‌شود.
     const val PROJECT_CONTRIBUTORS = "https://github.com/Pool-Of-Tears/Myne/graphs/contributors"
-    const val GITHUB_REPO = "https://github.com/Pool-Of-Tears/Myne"
-    const val WEBSITE = "https://pool-of-tears.github.io"
-    const val PRIVACY_POLICY =
-        "https://github.com/Pool-Of-Tears/Myne/blob/main/legal/PRIVACY-POLICY.md"
-    const val GITHUB_ISSUE = "https://github.com/Pool-Of-Tears/Myne/issues/new/choose"
-    const val TELEGRAM_GROUP = "https://t.me/PotApps"
-    const val SUPPORT = "https://github.com/sponsors/starry-shivam"
+    const val TELEGRAM_GROUP = GITHUB_REPO
+    const val SUPPORT = GITHUB_REPO
 }
