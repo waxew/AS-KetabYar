@@ -1,8 +1,8 @@
 /**
  * Copyright (c) [2022 - Present] Stɑrry Shivɑm
+ * Licensed under the Apache License, Version 2.0.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
+ * AS Team customization for AS-KetabYar.
  */
 package com.starry.myne.ui.screens.main
 
@@ -10,6 +10,7 @@ import android.annotation.SuppressLint
 import android.app.Activity
 import android.content.Intent
 import android.net.Uri
+import androidx.activity.compose.BackHandler
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.animation.AnimatedVisibility
@@ -56,8 +57,8 @@ import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
-import androidx.compose.runtime.setValue
 import androidx.compose.runtime.rememberCoroutineScope
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -85,7 +86,6 @@ import com.starry.myne.ui.navigation.Screens
 import com.starry.myne.ui.theme.poppinsFont
 import kotlinx.coroutines.launch
 
-/** فاصله رزرو شده برای نوار ناوبری پایین. */
 val bottomNavPadding = 70.dp
 
 @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
@@ -95,11 +95,30 @@ fun MainScreen(
     startDestination: String,
     networkStatus: NetworkObserver.Status,
 ) {
+    val context = LocalContext.current
+    val activity = context as? Activity
     val navController = rememberNavController()
     val drawerState = rememberDrawerState(initialValue = DrawerValue.Closed)
     val scope = rememberCoroutineScope()
+    val navBackStackEntry by navController.currentBackStackEntryAsState()
+    val currentRoute = navBackStackEntry?.destination?.route
 
-    // RTL در پوسته اصلی باعث می‌شود Drawer از سمت راست باز شود.
+    // رفتار Back استاندارد AS Team:
+    // 1) بستن Drawer، 2) برگشت در Back Stack، 3) برگشت به خانه، 4) انتقال برنامه به پس‌زمینه.
+    BackHandler {
+        when {
+            drawerState.isOpen -> scope.launch { drawerState.close() }
+            navController.previousBackStackEntry != null -> navController.popBackStack()
+            currentRoute != BottomBarScreen.Home.route -> {
+                navController.navigate(BottomBarScreen.Home.route) {
+                    popUpTo(navController.graph.findStartDestination().id)
+                    launchSingleTop = true
+                }
+            }
+            else -> activity?.moveTaskToBack(true)
+        }
+    }
+
     CompositionLocalProvider(LocalLayoutDirection provides LayoutDirection.Rtl) {
         ModalNavigationDrawer(
             drawerState = drawerState,
@@ -121,7 +140,6 @@ fun MainScreen(
                         networkStatus = networkStatus
                     )
 
-                    // دکمه همبرگری سراسری در گوشه بالا-راست.
                     IconButton(
                         onClick = { scope.launch { drawerState.open() } },
                         modifier = Modifier
@@ -157,9 +175,7 @@ private fun KetabYarDrawer(
 ) {
     val context = LocalContext.current
     val activity = context as? Activity
-    val preferences = remember {
-        context.getSharedPreferences("ketabyar_profile", 0)
-    }
+    val preferences = remember { context.getSharedPreferences("ketabyar_profile", 0) }
     var profileUri by remember {
         mutableStateOf(preferences.getString("profile_uri", null)?.let(Uri::parse))
     }
@@ -180,9 +196,7 @@ private fun KetabYarDrawer(
     }
 
     fun navigate(route: String) {
-        navController.navigate(route) {
-            launchSingleTop = true
-        }
+        navController.navigate(route) { launchSingleTop = true }
         onClose()
     }
 
@@ -205,9 +219,7 @@ private fun KetabYarDrawer(
                     AsyncImage(
                         model = profileUri,
                         contentDescription = "تصویر پروفایل",
-                        modifier = Modifier
-                            .size(92.dp)
-                            .clip(CircleShape)
+                        modifier = Modifier.size(92.dp).clip(CircleShape)
                     )
                 } else {
                     Icon(
@@ -227,7 +239,6 @@ private fun KetabYarDrawer(
             )
             Spacer(modifier = Modifier.size(14.dp))
 
-            // طبق استاندارد AS Team: تنظیمات و اشتراک‌گذاری در ابتدای منو.
             NavigationDrawerItem(
                 label = { Text("تنظیمات") },
                 selected = false,
@@ -241,9 +252,14 @@ private fun KetabYarDrawer(
                 onClick = {
                     val shareIntent = Intent(Intent.ACTION_SEND).apply {
                         type = "text/plain"
-                        putExtra(Intent.EXTRA_TEXT, "کتاب‌یار - https://github.com/waxew/AS-KetabYar")
+                        putExtra(
+                            Intent.EXTRA_TEXT,
+                            "کتاب‌یار - https://github.com/waxew/AS-KetabYar"
+                        )
                     }
-                    context.startActivity(Intent.createChooser(shareIntent, "اشتراک‌گذاری کتاب‌یار"))
+                    context.startActivity(
+                        Intent.createChooser(shareIntent, "اشتراک‌گذاری کتاب‌یار")
+                    )
                 }
             )
             NavigationDrawerItem(
@@ -329,10 +345,16 @@ private fun CustomBottomNavigationItem(
     isSelected: Boolean,
     onClick: () -> Unit,
 ) {
-    val background =
-        if (isSelected) MaterialTheme.colorScheme.primary.copy(alpha = 0.1f) else Color.Transparent
-    val contentColor =
-        if (isSelected) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.onBackground
+    val background = if (isSelected) {
+        MaterialTheme.colorScheme.primary.copy(alpha = 0.1f)
+    } else {
+        Color.Transparent
+    }
+    val contentColor = if (isSelected) {
+        MaterialTheme.colorScheme.primary
+    } else {
+        MaterialTheme.colorScheme.onBackground
+    }
 
     Box(
         modifier = Modifier
@@ -369,7 +391,9 @@ private fun HandleShortcutIntent(intent: Intent, navController: NavController) {
     if (data != null && data.scheme == MainViewModel.LAUNCHER_SHORTCUT_SCHEME) {
         val libraryItemId = intent.getIntExtra(MainViewModel.LC_SC_LIBRARY_ITEM_ID, -100)
         if (libraryItemId != -100) {
-            navController.navigate(Screens.ReaderDetailScreen.withLibraryItemId(libraryItemId.toString()))
+            navController.navigate(
+                Screens.ReaderDetailScreen.withLibraryItemId(libraryItemId.toString())
+            )
             return
         }
         if (intent.getBooleanExtra(MainViewModel.LC_SC_BOOK_LIBRARY, false)) {
