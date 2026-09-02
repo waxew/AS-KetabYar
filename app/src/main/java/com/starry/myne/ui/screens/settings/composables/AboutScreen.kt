@@ -41,6 +41,7 @@ import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.res.vectorResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
@@ -56,11 +57,8 @@ import com.starry.myne.ui.theme.poppinsFont
 @Composable
 fun AboutScreen(navController: NavController) {
     val context = LocalContext.current
-
     Scaffold(
-        modifier = Modifier
-            .fillMaxSize()
-            .background(MaterialTheme.colorScheme.background),
+        modifier = Modifier.fillMaxSize().background(MaterialTheme.colorScheme.background),
         topBar = {
             CustomTopAppBar(headerText = stringResource(id = R.string.about_header)) {
                 navController.navigateUp()
@@ -68,95 +66,68 @@ fun AboutScreen(navController: NavController) {
         }
     ) { paddingValues ->
         Column(
-            modifier = Modifier
-                .fillMaxSize()
-                .padding(paddingValues)
-                .verticalScroll(rememberScrollState())
-                .padding(bottom = 24.dp)
+            modifier = Modifier.fillMaxSize().padding(paddingValues)
+                .verticalScroll(rememberScrollState()).padding(bottom = 24.dp)
         ) {
             AppInfoCard()
             Spacer(modifier = Modifier.height(14.dp))
-
             Text(
                 text = stringResource(id = R.string.developed_by),
                 modifier = Modifier.padding(horizontal = 20.dp, vertical = 8.dp),
-                fontSize = 16.sp,
-                fontWeight = FontWeight.SemiBold
+                fontSize = 16.sp, fontWeight = FontWeight.SemiBold
             )
-
             Card(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .padding(horizontal = 14.dp),
+                modifier = Modifier.fillMaxWidth().padding(horizontal = 14.dp),
                 colors = CardDefaults.cardColors(
                     containerColor = MaterialTheme.colorScheme.surfaceColorAtElevation(2.dp)
                 )
             ) {
                 Row(
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .padding(16.dp),
+                    modifier = Modifier.fillMaxWidth().padding(16.dp),
                     verticalAlignment = Alignment.CenterVertically
                 ) {
                     Box(
-                        modifier = Modifier
-                            .size(72.dp)
-                            .clip(CircleShape)
+                        modifier = Modifier.size(72.dp).clip(CircleShape)
                             .background(MaterialTheme.colorScheme.surfaceVariant),
                         contentAlignment = Alignment.Center
                     ) {
                         Image(
                             painter = painterResource(id = R.drawable.ic_splash_screen),
-                            contentDescription = null,
-                            modifier = Modifier.size(64.dp)
+                            contentDescription = null, modifier = Modifier.size(64.dp)
                         )
                     }
                     Column(modifier = Modifier.padding(start = 14.dp)) {
                         Text(
                             text = stringResource(id = R.string.dev_name),
-                            fontSize = 18.sp,
-                            fontWeight = FontWeight.SemiBold
+                            fontSize = 18.sp, fontWeight = FontWeight.SemiBold
                         )
                         Text(
-                            text = "Develop by AS Team Group",
-                            fontSize = 13.sp,
+                            text = "Develop by AS Team Group", fontSize = 13.sp,
                             color = MaterialTheme.colorScheme.onSurfaceVariant
                         )
                         Spacer(modifier = Modifier.height(6.dp))
                         Row(
                             modifier = Modifier.clickable {
                                 Utils.openEmail(
-                                    context = context,
-                                    email = Constants.DEV_EMAIL,
+                                    context = context, email = Constants.DEV_EMAIL,
                                     subject = "AS-KetabYar Feedback (v${BuildConfig.VERSION_NAME})"
                                 )
                             },
                             verticalAlignment = Alignment.CenterVertically
                         ) {
-                            Icon(Icons.Default.Email, contentDescription = null, modifier = Modifier.size(18.dp))
-                            Text(
-                                text = Constants.DEV_EMAIL,
-                                modifier = Modifier.padding(start = 6.dp),
-                                fontSize = 13.sp
-                            )
+                            Icon(Icons.Default.Email, null, modifier = Modifier.size(18.dp))
+                            Text(Constants.DEV_EMAIL, modifier = Modifier.padding(start = 6.dp), fontSize = 13.sp)
                         }
                     }
                 }
             }
-
             Spacer(modifier = Modifier.height(14.dp))
             Text(
                 text = stringResource(id = R.string.useful_links),
                 modifier = Modifier.padding(horizontal = 20.dp, vertical = 8.dp),
-                fontSize = 16.sp,
-                fontWeight = FontWeight.SemiBold
+                fontSize = 16.sp, fontWeight = FontWeight.SemiBold
             )
-
-            Column(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .padding(horizontal = 14.dp)
-            ) {
+            Column(modifier = Modifier.fillMaxWidth().padding(horizontal = 14.dp)) {
                 SettingItem(
                     icon = ImageVector.vectorResource(id = R.drawable.ic_github_logo),
                     mainText = stringResource(id = R.string.link_readme),
@@ -189,41 +160,31 @@ fun AboutScreen(navController: NavController) {
 @Composable
 private fun AppInfoCard() {
     Card(
-        modifier = Modifier
-            .fillMaxWidth()
-            .padding(horizontal = 14.dp),
+        modifier = Modifier.fillMaxWidth().padding(horizontal = 14.dp),
         colors = CardDefaults.cardColors(
             containerColor = MaterialTheme.colorScheme.surfaceColorAtElevation(4.dp)
         )
     ) {
         Column(
-            modifier = Modifier
-                .fillMaxWidth()
-                .padding(24.dp),
+            modifier = Modifier.fillMaxWidth().padding(24.dp),
             horizontalAlignment = Alignment.CenterHorizontally,
             verticalArrangement = Arrangement.Center
         ) {
             Image(
                 painter = painterResource(id = R.drawable.ic_splash_screen),
-                contentDescription = null,
-                modifier = Modifier.size(112.dp)
+                contentDescription = null, modifier = Modifier.size(112.dp)
             )
             Text(
-                text = stringResource(id = R.string.app_name),
-                fontSize = 26.sp,
-                fontWeight = FontWeight.Bold,
-                textAlign = TextAlign.Center
+                text = stringResource(id = R.string.app_name), fontSize = 26.sp,
+                fontWeight = FontWeight.Bold, textAlign = TextAlign.Center
             )
             Text(
-                text = "نسخه ${BuildConfig.VERSION_NAME}",
-                fontSize = 14.sp,
-                fontFamily = poppinsFont,
-                color = MaterialTheme.colorScheme.onSurfaceVariant
+                text = "نسخه ${BuildConfig.VERSION_NAME}", fontSize = 14.sp,
+                fontFamily = poppinsFont, color = MaterialTheme.colorScheme.onSurfaceVariant
             )
             Spacer(modifier = Modifier.height(8.dp))
             Text(
-                text = stringResource(id = R.string.about_desc),
-                fontSize = 14.sp,
+                text = stringResource(id = R.string.about_desc), fontSize = 14.sp,
                 textAlign = TextAlign.Center
             )
         }
