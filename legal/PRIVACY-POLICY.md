@@ -1,19 +1,37 @@
-## Privacy Policy
-This Privacy Policy statement is made by Pool-Of-Tears, consisting of all the entities listed here (collectively referred to as "Pool-Of-Tears," "we," "us," or "our").
-Our mission is to help people protect their privacy, data, and devices from online threats. Myne doesn't track you with ads or abuse your privacy.
-We do not require you to create any kind of account with personally identifiable information in order to use the app.
-We only ask for the least amount of information necessary for the proper functioning of the application, which is explained below.
+# سیاست حریم خصوصی کتاب‌یار
 
-#### Why is Internet permission required?
-Internet permission is required to browse and download the ebooks catalog from the [Project Gutenberg](https://gutenberg.org)'s book library, which is hosted on the internet.
+آخرین بروزرسانی: 2026-09-02
 
-#### Terms of Use
-Thank you for using Myne. To protect the app and our users, we require this user agreement to set rules that are necessary to use our software.
-Myne is a free and open-source software, which is entirely free to use for non-commercial purposes as long as you agree to our privacy policies.
-If you have found a bug or vulnerability in Myne, there are several ways to report the problem so we can fix it:
+کتاب‌یار (`AS-KetabYar`) برای جستجو، دریافت، مدیریت و مطالعه کتاب‌های الکترونیکی طراحی شده است.
 
-- Writing us an email with a detailed description of the issue you're facing.
-- Contacting us in our [Telegram](https://t.me/PotApps) support group.
-- Creating an issue on the [GitHub](https://github.com/Pool-Of-Tears/Myne) repository of the app.
+## اطلاعات حساب
 
-This Privacy Policy is subject to updates without any prior notice.
+نسخه فعلی کتاب‌یار برای استفاده از امکانات اصلی، کاربر را مجبور به ساخت حساب کاربری نمی‌کند.
+
+## دسترسی اینترنت
+
+دسترسی اینترنت برای دریافت فهرست و اطلاعات کتاب‌ها و دریافت محتوای کتاب از سرویس‌های آنلاین مورد استفاده پروژه لازم است. پروژه پایه برای فهرست کتاب‌های عمومی از Project Gutenberg/GutenDex استفاده می‌کند.
+
+## فایل‌های محلی
+
+هنگامی که کاربر یک فایل EPUB را وارد برنامه می‌کند، کتاب‌یار برای پردازش و مطالعه همان فایل از دسترسی‌ای که کاربر از طریق انتخاب‌گر فایل Android اعطا کرده استفاده می‌کند.
+
+## داده‌های برنامه
+
+کتابخانه، وضعیت مطالعه و تنظیمات مورد نیاز برنامه می‌توانند به‌صورت محلی در Room Database و DataStore ذخیره شوند. در توسعه نسخه‌های جدید، Migration باید به شکلی انجام شود که داده‌های کاربر در بروزرسانی عادی برنامه حفظ شوند.
+
+## تبلیغات و فروش داده
+
+نسخه فعلی سورس کتاب‌یار سامانه‌ای برای فروش اطلاعات شخصی کاربر تعریف نکرده است. اگر در نسخه‌های آینده سرویس تحلیلی، تبلیغاتی، حساب کاربری یا سرویس ابری اضافه شود، این سند باید پیش از انتشار آن نسخه بروزرسانی شود.
+
+## پروژه متن‌باز پایه
+
+کتاب‌یار بر پایه پروژه متن‌باز Myne توسعه داده می‌شود و مجوزها و attributionهای لازم پروژه پایه حفظ می‌شوند.
+
+## ارتباط
+
+پشتیبانی AS Team Group:
+
+`AS.Developers.Support@Gmail.Com`
+
+Repository: `waxew/AS-KetabYar`
